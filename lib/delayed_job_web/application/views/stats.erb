@@ -4,33 +4,33 @@
     <th class="status">
       environment
     </th>
-    <th>
+    <td>
       <%=h Sinatra::Application.environment.to_s %>
-    </th>
+    </td>
   </tr>
   <tr>
     <th class="status">
       failed
     </th>
-    <th>
+    <td>
       <%= delayed_jobs(:failed, @queues).count %>
-    </th>
+    </td>
   </tr>
   <tr>
     <th class="status">
       pending
     </th>
-    <th>
+    <td>
       <%= delayed_jobs(:pending, @queues).count %>
-    </th>
+    </td>
   </tr>
   <tr>
     <th class="status">
       working
     </th>
-    <th>
+    <td>
       <%= delayed_jobs(:working, @queues).count %>
-    </th>
+    </td>
   </tr>
 </table>
 <%= poll %>
