@@ -23,7 +23,13 @@
     <% end %>
     <dt>Handler</dt>
     <dd>
-    <pre><%=h job.handler %></pre>
+      <div class="handler">
+        <pre><%=h job.handler[0..100] + '...' %></pre>
+      </div>
+      <a class="handler" href="#">Toggle full message</a>
+      <div class="handler full hide">
+        <pre><%=h job.handler %></pre>
+      </div>
     </dd>
     <% if job.last_error %>
       <dt>Last Error</dt>
